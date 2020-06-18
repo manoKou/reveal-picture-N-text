@@ -1,0 +1,164 @@
+//@import url('https://fonts.googleapis.com/css?family=Lato');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/*
+
+ -moz-keyframes name {}
+  -o-keyframes name {}
+*/
+
+@-webkit-keyframes fadeintext {
+  0%{transform: translateX(-150px);background-color: rgba(22,22,22,0)}
+  70%{transform: translateX(-265px);background-color: rgba(22,22,22,0.7)}
+  85%{transform: translateX(-205px);background-color: rgba(22,22,22,0.85)}
+  100%{transform: translateX(-225px);background-color: rgba(22,22,22,1)}
+}
+
+@keyframes fadeintext {
+  0%{transform: translateX(-150px);background-color: rgba(22,22,22,0)}
+  70%{transform: translateX(-265px);background-color: rgba(22,22,22,0.7)}
+  85%{transform: translateX(-205px);background-color: rgba(22,22,22,0.85)}
+  100%{transform: translateX(-225px);background-color: rgba(22,22,22,1)}
+}
+
+@-webkit-keyframes blurdown {
+  0%{top: 0;}
+  //90%{top: 90%;}
+  100%{top: 100%;}
+}
+
+@keyframes blurdown {
+  0%{top: 0;}
+  40%{top: 0;}
+  100%{top: 100%;}
+}
+
+@-webkit-keyframes blurlayer {
+  0%{background-color:rgba(0,0,0,1)}
+  50%{background-color: rgba(0,0,0,1)}
+  51%{background-color: rgba(22,22,22,1)}
+  90%{background-color: rgba(22,22,22,1)}
+  91%{background-color: rgba(0,0,0,1)}
+  100%{background-color: rgba(0,0,0,1)}
+}
+
+@keyframes blurlayer {
+  0%{background-color:rgba(0,0,0,1)}
+  50%{background-color: rgba(0,0,0,1)}
+  51%{background-color: rgba(0,0,0,1)}
+  70%{background-color: rgba(0,0,0,1)}
+  91%{background-color: rgba(0,0,0,0)}
+  100%{background-color: rgba(0,0,0,0)}
+}
+
+
+.main-cont{
+  padding: 20px;
+
+}
+
+.main-wrapper{
+  background-color: black;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+}
+
+.img-cont{
+  max-width: 100%;
+  flex-shrink: 1;
+  position: relative;
+}
+
+/*.img-cont:after{
+  background-color: rgb(22,22,22);
+}*/
+
+.img-wrapper{
+  background-color: red;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("samuel.jpg");
+  padding-bottom: 450px;
+  width: 450px;
+  max-width: 100%;
+  position: relative;
+}
+
+.img{
+  display: none;
+  /*width:450px;
+  height: 450px;*/
+}
+
+.img-layer{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(22,22,22,0);
+  //background-color: blue;
+  animation-name: blurlayer;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
+
+.blur-div{
+  position: absolute;
+  //top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  //background-color: rgba(10,10,10,1);
+  background-color: rgba(22,22,22);
+  animation-name: blurdown;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+
+}
+
+.first-text-cont{
+  width: auto;
+  background-color: rgba(22,22,22,0.8);
+  width: 450px;
+  transform: translateX(-450px);
+  transform: translateX(-225px);
+  padding: 40px;
+  text-align: center;
+  border: 1px solid rgba(22,22,22,1);
+  flex-shrink: 1;
+  animation-name: fadeintext;
+  animation-duration: 0.65s;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+}
+
+.text{
+  font-size: 42px;
+  color: white;
+  font-family: 'Lato', serif;
+}
+
+
+
+
+
+
+
+
+
+
+/**/
